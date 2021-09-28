@@ -1,0 +1,8 @@
+projectName: seriesview
+pythonProjectVersion: 0.1.0
+projectAuthor: Jeremy Magland
+projectAuthorEmail: jmagland@flatironinstitute.org
+projectDescription: Web app for viewing timeseries
+projectUrl: https://github.com/magland/seriesview
+projectBugTrackerUrl: https://github.com/magland/seriesview/issues
+pythonPackageDir: .
