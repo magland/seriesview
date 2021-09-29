@@ -56,9 +56,9 @@ class Timeseries:
         return self._model.sampling_frequency
     def figurl(self):
         data = {
-            'timeseriesUri': kc.store_json(self.object)
+            'timeseriesObject': self.object
         }
-        return Figure(type='experitime.timeseries.1', data=data)
+        return Figure(type='seriesview.timeseries.2', data=data)
     @staticmethod
     def from_numpy(*, channel_names: List[str], timestamps: np.ndarray, values: np.ndarray, type: Union[Literal['continuous'], Literal['discrete']], channel_properties: Union[dict, None]=None):
         num_channels = len(channel_names)

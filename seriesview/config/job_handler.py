@@ -5,6 +5,10 @@ from copy import deepcopy
 
 default_config_yaml = '''
 job_handlers:
+    misc:
+        type: parallel
+        params:
+            num_workers: 4
     timeseries:
         type: parallel
         params:
@@ -34,4 +38,5 @@ def _job_handler_from_config(x):
 print(yaml.safe_dump(config))
 
 class job_handler:
+    misc = _job_handler_from_config(config['job_handlers']['misc'])
     timeseries = _job_handler_from_config(config['job_handlers']['timeseries'])
